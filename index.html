@@ -47,8 +47,6 @@
         }
 
         function drawHorizontalSite() {
-        circle.style.width = window.innerWidth * 0.3 + "px";
-        circle.style.height = window.innerWidth * 0.3 + "px";
         circle.style.left = "20%";
         circle.style.top = "50%";
         circle.style.transform = "translate(-50%, -50%)";
@@ -62,11 +60,12 @@
         circle2.style.top = "50%";
         circle2.innerHTML = "circle2.clientWidth: " + circle2.clientWidth + "<br>" + "circle2.clientHeight: " + circle2.clientHeight;
         circle2.style.fontSize = circle2.clientWidth / 12 + "px";
+        let circleDiameter = window.innerWidth * 0.3 + "px";
+        circle.style.width = circleDiameter;
+        circle.style.height = circleDiameter;
         }
         
         function drawVerticalSite() {
-        circle.style.width = window.innerHeight * 0.3 + "px";
-        circle.style.height = window.innerHeight * 0.3 + "px";
         circle.style.left = "50%";
         circle.style.top = "20%";
         circle.style.transform = "translate(-50%, -50%)";
@@ -80,6 +79,9 @@
         circle2.style.bottom = "20%";
         circle2.innerHTML = "circle2.clientWidth: " + circle2.clientWidth + "<br>" + "circle2.clientHeight: " + circle2.clientHeight;
         circle2.style.fontSize = circle2.clientWidth / 12 + "px";
+        let circleDiameter = window.innerHeight * 0.3 + "px";
+        circle.style.width = circleDiameter;
+        circle.style.height = circleDiameter;
         }
 
         drawSite();
