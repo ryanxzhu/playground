@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div id="circle"></div>
+    <div id="circle2"></div>
+    <script>
+        const circle = document.getElementById("circle");
+        circle.style.width = window.innerHeight * 0.7 + "px";
+        circle.style.height = window.innerHeight * 0.7 + "px";
+        circle.style.borderRadius = "50%";
+        circle.style.position = "absolute";
+        circle.style.left = "50%";
+        circle.style.top = "10%";
+        circle.style.transform = "translate(-50%, 0)";
+        circle.style.border = "1px solid #000aff";
+        circle.style.color = "white";
+
+        const circle2 = document.getElementById("circle2");
+        circle2.style.width = circle.clientWidth * 0.9 + "px";
+        circle2.style.height = circle.clientHeight * 0.9 + "px";
+        console.log(window.innerWidth + " " + window.outerWidth);
+        circle2.style.borderRadius = "50%";
+        circle2.style.position = "absolute";
+        circle2.style.left = "50%";
+        circle2.style.top = "10%";
+        circle2.style.transform = "translate(-50%, 0)";
+        circle2.style.border = "1px solid #000aff";
+        circle2.style.color = "white";
+        circle.innerHTML = circle.clientWidth;
+
+
+    </script>
+</body>
+</html>
