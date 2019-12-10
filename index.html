@@ -16,33 +16,65 @@
     <div id="circle"></div>
     <div id="circle2"></div>
     <script>
-        function redraw() {
-        const circle = document.getElementById("circle");
+    const circle = document.getElementById("circle");
+    const circle2 = document.getElementById("circle2");
+    circle.style.borderRadius = "50%";
+    circle.style.position = "absolute";
+    circle.style.border = "1px solid #000aff";
+    circle.style.color = "white";
+    circle.style.display = "flex";
+    circle.style.alignItems = "center";
+    circle.style.justifyContent = "center";
+    circle.style.fontFamily = "Roboto, sans-serif";
+    circle.style.textAlign = "center";
+
+    circle2.style.borderRadius = "50%";
+    circle2.style.position = "absolute";
+    circle2.style.border = "1px solid #000aff";
+    circle2.style.color = "white";
+
+        function drawSite() {
+            if(window.innerWidth > window.innerHeight) {
+                drawHorizontalSite();
+                return;
+            }
+            drawVerticalSite();
+        }
+
+        function drawHorizontalSite() {
         circle.style.width = window.innerWidth * 0.3 + "px";
         circle.style.height = window.innerWidth * 0.3 + "px";
-        circle.style.borderRadius = "50%";
-        circle.style.position = "absolute";
         circle.style.left = "20%";
         circle.style.top = "50%";
         circle.style.transform = "translate(-50%, -50%)";
-        circle.style.border = "1px solid #000aff";
-        circle.style.color = "white";
-        circle.style.textAlign = "center";
+        circle.innerHTML = "window.innerWidth: " + window.innerWidth + "<br>" + "window.innerHeight: " + window.innerHeight;
 
-        const circle2 = document.getElementById("circle2");
         circle2.style.width = window.innerWidth * 0.3 + "px";
         circle2.style.height = window.innerWidth * 0.3 + "px";
-        circle2.style.borderRadius = "50%";
-        circle2.style.position = "absolute";
         circle2.style.right = "20%";
         circle2.style.transform = "translate(50%, -50%)";
         circle2.style.top = "50%";
-        circle2.style.border = "1px solid #000aff";
-        circle2.style.color = "white";
-        circle.innerHTML = "<br><br><br><br><br>" + "window.innerWidth: " + window.innerWidth + "<br>" + "window.innerHeight: " + window.innerHeight;
+        circle.style.fontSize = circle.clientWidth / 12 + "px";
         }
-        redraw();
-        window.addEventListener("resize", redraw);
+        
+        function drawVerticalSite() {
+        circle.style.width = window.innerHeight * 0.3 + "px";
+        circle.style.height = window.innerHeight * 0.3 + "px";
+        circle.style.left = "50%";
+        circle.style.top = "20%";
+        circle.style.transform = "translate(-50%, -50%)";
+        circle.innerHTML = "window.innerWidth: " + window.innerWidth + "<br>" + "window.innerHeight: " + window.innerHeight;
+
+        circle2.style.width = window.innerHeight * 0.3 + "px";
+        circle2.style.height = window.innerHeight * 0.3 + "px";
+        circle2.style.left = "50%";
+        circle2.style.transform = "translate(-50%, 50%)";
+        circle2.style.bottom = "20%";
+        circle.style.fontSize = circle.clientWidth / 12 + "px";
+        }
+
+        drawSite();
+        window.addEventListener("resize", drawSite);
     </script>
 </body>
 </html>
