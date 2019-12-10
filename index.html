@@ -50,19 +50,22 @@
         circle.style.left = "20%";
         circle.style.top = "50%";
         circle.style.transform = "translate(-50%, -50%)";
-        circle.innerHTML = "window.innerWidth: " + window.innerWidth + "<br>" + "window.innerHeight: " + window.innerHeight;
-        circle.style.fontSize = circle.clientWidth / 12 + "px";
 
-        circle2.style.width = window.innerWidth * 0.3 + "px";
-        circle2.style.height = window.innerWidth * 0.3 + "px";
+        
         circle2.style.right = "20%";
         circle2.style.transform = "translate(50%, -50%)";
         circle2.style.top = "50%";
-        circle2.innerHTML = "circle2.clientWidth: " + circle2.clientWidth + "<br>" + "circle2.clientHeight: " + circle2.clientHeight;
+        let circle2Diameter = window.innerWidth * 0.3 + "px";
+        circle2.style.width = circle2Diameter;
+        circle2.style.height = circle2Diameter;
         circle2.style.fontSize = circle2.clientWidth / 12 + "px";
         let circleDiameter = window.innerWidth * 0.3 + "px";
         circle.style.width = circleDiameter;
         circle.style.height = circleDiameter;
+        circle.style.fontSize = circle.clientWidth / 12 + "px";
+        circle.innerHTML = "window.innerWidth: " + window.innerWidth + "<br>" + "window.innerHeight: " + window.innerHeight;
+        circle2.innerHTML = "circle2.clientWidth: " + circle2.clientWidth + "<br>" + "circle2.clientHeight: " + circle2.clientHeight;
+
         }
         
         function drawVerticalSite() {
@@ -70,18 +73,20 @@
         circle.style.top = "20%";
         circle.style.transform = "translate(-50%, -50%)";
         circle.innerHTML = "window.innerWidth: " + window.innerWidth + "<br>" + "window.innerHeight: " + window.innerHeight;
-        circle.style.fontSize = circle.clientWidth / 12 + "px";
 
-        circle2.style.width = window.innerHeight * 0.3 + "px";
-        circle2.style.height = window.innerHeight * 0.3 + "px";
+
         circle2.style.left = "50%";
         circle2.style.transform = "translate(-50%, 50%)";
         circle2.style.bottom = "20%";
-        circle2.innerHTML = "circle2.clientWidth: " + circle2.clientWidth + "<br>" + "circle2.clientHeight: " + circle2.clientHeight;
-        circle2.style.fontSize = circle2.clientWidth / 12 + "px";
+        let circle2Diameter = window.innerHeight * 0.3 + "px";
+        circle2.style.width = circle2Diameter;
+        circle2.style.height = circle2Diameter;
         let circleDiameter = window.innerHeight * 0.3 + "px";
         circle.style.width = circleDiameter;
         circle.style.height = circleDiameter;
+        circle.style.fontSize = circle.clientWidth / 12 + "px";
+        circle2.innerHTML = "circle2.clientWidth: " + circle2.clientWidth + "<br>" + "circle2.clientHeight: " + circle2.clientHeight;
+        circle2.style.fontSize = circle2.clientWidth / 12 + "px";
         }
 
         drawSite();
