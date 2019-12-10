@@ -32,6 +32,11 @@
     circle2.style.position = "absolute";
     circle2.style.border = "1px solid #000aff";
     circle2.style.color = "white";
+    circle2.style.display = "flex";
+    circle2.style.alignItems = "center";
+    circle2.style.justifyContent = "center";
+    circle2.style.fontFamily = "Roboto, sans-serif";
+    circle2.style.textAlign = "center";
 
         function drawSite() {
             if(window.innerWidth > window.innerHeight) {
@@ -48,13 +53,15 @@
         circle.style.top = "50%";
         circle.style.transform = "translate(-50%, -50%)";
         circle.innerHTML = "window.innerWidth: " + window.innerWidth + "<br>" + "window.innerHeight: " + window.innerHeight;
+        circle.style.fontSize = circle.clientWidth / 12 + "px";
 
         circle2.style.width = window.innerWidth * 0.3 + "px";
         circle2.style.height = window.innerWidth * 0.3 + "px";
         circle2.style.right = "20%";
         circle2.style.transform = "translate(50%, -50%)";
         circle2.style.top = "50%";
-        circle.style.fontSize = circle.clientWidth / 12 + "px";
+        circle2.innerHTML = "circle2.clientWidth: " + circle2.clientWidth + "<br>" + "circle2.clientHeight: " + circle2.clientHeight;
+        circle2.style.fontSize = circle2.clientWidth / 12 + "px";
         }
         
         function drawVerticalSite() {
@@ -64,13 +71,15 @@
         circle.style.top = "20%";
         circle.style.transform = "translate(-50%, -50%)";
         circle.innerHTML = "window.innerWidth: " + window.innerWidth + "<br>" + "window.innerHeight: " + window.innerHeight;
+        circle.style.fontSize = circle.clientWidth / 12 + "px";
 
         circle2.style.width = window.innerHeight * 0.3 + "px";
         circle2.style.height = window.innerHeight * 0.3 + "px";
         circle2.style.left = "50%";
         circle2.style.transform = "translate(-50%, 50%)";
         circle2.style.bottom = "20%";
-        circle.style.fontSize = circle.clientWidth / 12 + "px";
+        circle2.innerHTML = "circle2.clientWidth: " + circle2.clientWidth + "<br>" + "circle2.clientHeight: " + circle2.clientHeight;
+        circle2.style.fontSize = circle2.clientWidth / 12 + "px";
         }
 
         drawSite();
